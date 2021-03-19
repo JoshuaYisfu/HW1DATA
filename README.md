@@ -94,6 +94,28 @@ In GCP, simply include the arguments in the **Arguments** field of the job you'r
 You'll be submitting a report along with your code that provides commentary on the tasks below.  
 
 1. **(4 points)** Run the program on your local machine to solve cases `k = 2,3,4,5,6`. For each `k`, provide `xS`, its hash value, the total time elapsed, and the number of trials.  
+```
+// k = 1
+
+// k = 2
+spark-submit --class project_1.main --master local[*] target/scala-2.12/project_1_2.12-1.0.jar this_is_a_bitcoin_block_of_34974696_and_22615604 2 100
+
+==================================
+found. count:2
+(1441097364this_is_a_bitcoin_block_of_34974696_and_22615604,007c0b4801d1677a695f05db9f2ae0f22e91b5d0bef2f3ec299cfabb65202fe8)
+Time elapsed:1s
+==================================
+
+// k = 3
+
+// k = 4
+
+// k = 5
+
+// k = 6
+
+```
+
 2. **(3 points)** Run the program on GCP to solve the case `k = 7`. Provide `xS`, its hash value, the total time elapsed, and the number of trials. Describe your cluster's configuration (number of machines, number/type of cores, etc.) and your process for estimating the number of trials needed in order to find the nonce.  
 3. **(3 points)** Modify **one** line of code in **src/main/scala/project_1/main.scala** so that the program generates the potential nonce from 1 to `n` (the number of trials) instead of randomly. Discuss whether or not this is more efficient than the randomized approach.
 
