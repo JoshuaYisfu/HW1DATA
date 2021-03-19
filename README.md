@@ -5,98 +5,65 @@ Sean Chiang and Joshua Yi
 
 ```
 // k = 1
-spark-submit --class project_1.main --master local[*] target/scala-2.12/project_1_2.12-1.0.jar this_is_a_bitcoin_block_of_34974696_and_22615604 1 20
-==================================
-found. count:1
-(459401870this_is_a_bitcoin_block_of_34974696_and_22615604,043517ad05e2fbd95e7580c30b531717f0976b2de69f6766b7812675d41b0919)
-Time elapsed:1s
-==================================
 
-xS          = 459401870this_is_a_bitcoin_block_of_34974696_and_22615604
-hashValue   = 043517ad05e2fbd95e7580c30b531717f0976b2de69f6766b7812675d41b0919
+xS          = 793641660this_is_a_bitcoin_block_of_34974696_and_22615604
+hashValue   = 0d3068f6c9d251efd27c65bb3f431462d5189199243554e7f827a4a752c51bd2
 timeElapsed = 1s
-numTrials   = 20
+numTrials   = 1
 ```
 ```
 // k = 2
-spark-submit --class project_1.main --master local[*] target/scala-2.12/project_1_2.12-1.0.jar this_is_a_bitcoin_block_of_34974696_and_22615604 2 100
-==================================
-found. count:2
-(1441097364this_is_a_bitcoin_block_of_34974696_and_22615604,007c0b4801d1677a695f05db9f2ae0f22e91b5d0bef2f3ec299cfabb65202fe8)
-Time elapsed:1s
-==================================
 
-xS          = 1441097364this_is_a_bitcoin_block_of_34974696_and_22615604
-hashValue   = 007c0b4801d1677a695f05db9f2ae0f22e91b5d0bef2f3ec299cfabb65202fe8
+xS          = 921400433this_is_a_bitcoin_block_of_34974696_and_22615604
+hashValue   = 00e5bf2be4512d69d04ccac0970e622e00dae60a292017f1f347c08dde43e80c
 timeElapsed = 1s
-numTrials   = 100
+numTrials   = 85
 ```
 ```
 // k = 3
-spark-submit --class project_1.main --master local[*] target/scala-2.12/project_1_2.12-1.0.jar this_is_a_bitcoin_block_of_34974696_and_22615604 3 500
-==================================
-found. count:2
-(1766558624this_is_a_bitcoin_block_of_34974696_and_22615604,000300da4ba6700bdf299db22c5f02fcb3821918d65e03cfce3d9d8bd18922fc)
-Time elapsed:1s
-==================================
 
-xS          = 1766558624this_is_a_bitcoin_block_of_34974696_and_22615604
-hashValue   = 000300da4ba6700bdf299db22c5f02fcb3821918d65e03cfce3d9d8bd18922fc
+xS          = 1935801145this_is_a_bitcoin_block_of_34974696_and_22615604
+hashValue   = 000ff59c44a1aeeecd7a83bc8bcf775da7c3b0f54d3126f13cebba9a775cea9c
 timeElapsed = 1s
-numTrials   = 500
+numTrials   = 340
 ```
 ```
 // k = 4
-spark-submit --class project_1.main --master local[*] target/scala-2.12/project_1_2.12-1.0.jar this_is_a_bitcoin_block_of_34974696_and_22615604 4 20000
-==================================
-found. count:1
-(1982335496this_is_a_bitcoin_block_of_34974696_and_22615604,000053cf86cd141cc423ea4ce49b4506044c812f89da06665b1466b5fcb14430)
-Time elapsed:1s
-==================================
 
-xS          = 1982335496this_is_a_bitcoin_block_of_34974696_and_22615604
-hashValue   = 000053cf86cd141cc423ea4ce49b4506044c812f89da06665b1466b5fcb14430
+xS          = 1292877562this_is_a_bitcoin_block_of_34974696_and_22615604
+hashValue   = 00002346784365707d54d2ca2a41018fb97a8e4114e202e7b170ada947d152c2
 timeElapsed = 1s
-numTrials   = 20000
+numTrials   = 2186
 ```
 ```
 // k = 5
-spark-submit --class project_1.main --master local[*] target/scala-2.12/project_1_2.12-1.0.jar this_is_a_bitcoin_block_of_34974696_and_22615604 5 500000
-==================================
-found. count:1
-(800279104this_is_a_bitcoin_block_of_34974696_and_22615604,00000c5432065c50ff4220099d1df38fe1693fd75655407d1e38be5da96333b7)
-Time elapsed:2s
-==================================
 
-xS          = 800279104this_is_a_bitcoin_block_of_34974696_and_22615604
-hashValue   = 00000c5432065c50ff4220099d1df38fe1693fd75655407d1e38be5da96333b7
-timeElapsed = 2s
-numTrials   = 500000
+xS          = 2076686935this_is_a_bitcoin_block_of_34974696_and_22615604
+hashValue   = 0000048ab821dff36fdf761ccad3c7ac58431abf11240ed8ffe40527b255b9a5
+timeElapsed = 1s
+numTrials   = 24384
 ```
 ```
 // k = 6
-spark-submit --class project_1.main --master local[*] target/scala-2.12/project_1_2.12-1.0.jar this_is_a_bitcoin_block_of_34974696_and_22615604 6 5000000
-==================================
-found. count:1
-(2117178249this_is_a_bitcoin_block_of_34974696_and_22615604,00000067af8562e7c9697f45484be6b9f8e18f9f05442727f0fceb84161b72c2)
-Time elapsed:3s
-==================================
 
-xS          = 2117178249this_is_a_bitcoin_block_of_34974696_and_22615604
-hashValue   = 00000067af8562e7c9697f45484be6b9f8e18f9f05442727f0fceb84161b72c2
+xS          = 1971864184this_is_a_bitcoin_block_of_34974696_and_22615604
+hashValue   = 0000004a8acc5c382e21f367b53d403679fbddd715edf05c0ae61bad3f220b37
 timeElapsed = 3s
-numTrials   = 5000000
+numTrials   = 228474
 ```
 
 ## 2. **(3 points)** Run the program on GCP to solve the case `k = 7`. Provide `xS`, its hash value, the total time elapsed, and the number of trials. Describe your cluster's configuration (number of machines, number/type of cores, etc.) and your process for estimating the number of trials needed in order to find the nonce.  
 
 ```
-k=7
-xS= 
-hash value=
-time elapsed=
-Number of trials= 
-Cluster's configurations= 2 machines, 48 cores and 96 threads since we are using a N-1 machine GCP
+// k = 7
+xS          = 
+hashValue   =
+timeElapsed =
+numTrials   = 
+
+Clusters' configuration
+  - 2 machines
+  - 48 cores and 96 threads since we are using a N-1 machine GCP
 ```
 
 ## 3. **(3 points)** Modify **one** line of code in **src/main/scala/project_1/main.scala** so that the program generates the potential nonce from 1 to `n` (the number of trials) instead of randomly. Discuss whether or not this is more efficient than the randomized approach.

@@ -61,16 +61,15 @@ object main {
     val hash_result = nonce.map(x => (x.toString(), sha256Hash(x.toString() + header_1)))
 
     val withIndex = hash_result.zipWithIndex
-    val indexKey = withIndex.map{case (k,v) => (v,k)}
 
-    val ans = indexKey.filter({ case (z: Long, (x: String, y: String)) => y.startsWith(zeroes_prefix) })
+    val ans = withIndex.filter({ case ((x: String, y: String), z: Long) => y.startsWith(zeroes_prefix) })
     ans.cache()
 
     println("==================================")
     if (ans.count != 0) {
-      println("found. index:" + ans.first._1)
+      println("found. index:" + ans.first._2)
       val out = ans.take(1)(0)
-      println("(" + out._1 + header_1 + "," + out._2 + ")")
+      println("(" + out._1._1 + header_1 + "," + out._1._2 + ")")
     }
     else
       println("did not find")
