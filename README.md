@@ -182,7 +182,14 @@ numTrials   = 5000000
 
 2. **(3 points)** Run the program on GCP to solve the case `k = 7`. Provide `xS`, its hash value, the total time elapsed, and the number of trials. Describe your cluster's configuration (number of machines, number/type of cores, etc.) and your process for estimating the number of trials needed in order to find the nonce.  
 3. **(3 points)** Modify **one** line of code in **src/main/scala/project_1/main.scala** so that the program generates the potential nonce from 1 to `n` (the number of trials) instead of randomly. Discuss whether or not this is more efficient than the randomized approach.
+```
+This modification is likely not more efficient because of the limitation of the possible hashes. The only thing that generating possible nonces from 1 to 'n' does is limit our possible answer.
+If there is no nonce that hashes to satisfy the difficulty set under our number of trials, then no matter how many times we run that trial we will never find a solution.
+On the other hand, using a random nonce from 1 to 2^32 has a chance that it might find a nonce that fulfills our difficulty no matter the number of trials, yet it is still very low.
 
+The distribution of hash values evens out as the number of trials grows larger in our modified code, but the distribution of hashes is already even if we choose a random nonce from 1 to 2^32
+regardless of how many trials we run. As such, it is not more efficient to limit our potention nonces to the number of trials instead of selecting randomly.
+```
 ## Submission via GitHub
 Delete your project's current **README.md** file (the one you're reading right now) and include your report as a new **README.md** file in the project root directory. Have no fear—the README with the project description is always available for reading in the template repository you created your repository from. For more information on READMEs, feel free to visit [this page](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-readmes) in the GitHub Docs. You'll be writing in [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown). Be sure that your repository is up to date and you have pushed all changes you've made to the project's code. When you're ready to submit, simply provide the link to your repository in the Canvas assignment's submission.
 
