@@ -55,17 +55,20 @@ object main {
 
     val nonce = sc.range(0, trials).mapPartitionsWithIndex((indx, iter) => {
       val rand = new scala.util.Random(indx + seed)
-      iter.map(x => rand.nextInt(trials - 1) + 1)
+      iter.map(x => rand.nextInt(Int.MaxValue - 1) + 1)
     })
 
     val hash_result = nonce.map(x => (x.toString(), sha256Hash(x.toString() + header_1)))
 
-    val ans = hash_result.filter({ case (x: String, y: String) => y.startsWith(zeroes_prefix) })
+    val withIndex = hash_result.zipWithIndex
+    val indexKey = withIndex.map{case (k,v) => (v,k)}
+
+    val ans = indexKey.filter({ case (z: Long, (x: String, y: String)) => y.startsWith(zeroes_prefix) })
     ans.cache()
 
     println("==================================")
     if (ans.count != 0) {
-      println("found. count:" + ans.count)
+      println("found. index:" + ans.first._1)
       val out = ans.take(1)(0)
       println("(" + out._1 + header_1 + "," + out._2 + ")")
     }
