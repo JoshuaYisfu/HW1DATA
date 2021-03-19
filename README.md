@@ -109,7 +109,7 @@ hashValue   = 043517ad05e2fbd95e7580c30b531717f0976b2de69f6766b7812675d41b0919
 timeElapsed = 1s
 numTrials   = 20
 
-
+/************************************************************/
 // k = 2
 spark-submit --class project_1.main --master local[*] target/scala-2.12/project_1_2.12-1.0.jar this_is_a_bitcoin_block_of_34974696_and_22615604 2 100
 ==================================
@@ -124,6 +124,7 @@ timeElapsed = 1s
 numTrials   = 100
 
 
+/************************************************************/
 // k = 3
 spark-submit --class project_1.main --master local[*] target/scala-2.12/project_1_2.12-1.0.jar this_is_a_bitcoin_block_of_34974696_and_22615604 3 500
 ==================================
@@ -138,6 +139,7 @@ timeElapsed = 1s
 numTrials   = 500
 
 
+/************************************************************/
 // k = 4
 spark-submit --class project_1.main --master local[*] target/scala-2.12/project_1_2.12-1.0.jar this_is_a_bitcoin_block_of_34974696_and_22615604 4 20000
 ==================================
@@ -152,6 +154,7 @@ timeElapsed = 1s
 numTrials   = 20000
 
 
+/************************************************************/
 // k = 5
 spark-submit --class project_1.main --master local[*] target/scala-2.12/project_1_2.12-1.0.jar this_is_a_bitcoin_block_of_34974696_and_22615604 5 500000
 ==================================
@@ -166,6 +169,7 @@ timeElapsed = 2s
 numTrials   = 500000
 
 
+/************************************************************/
 // k = 6
 spark-submit --class project_1.main --master local[*] target/scala-2.12/project_1_2.12-1.0.jar this_is_a_bitcoin_block_of_34974696_and_22615604 6 5000000
 ==================================
