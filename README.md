@@ -92,6 +92,14 @@ numTrials   = 5000000
 
 ## 3. **(3 points)** Modify **one** line of code in **src/main/scala/project_1/main.scala** so that the program generates the potential nonce from 1 to `n` (the number of trials) instead of randomly. Discuss whether or not this is more efficient than the randomized approach.
 
+```
+change
+iter.map(x => rand.nextInt(Int.MaxValue - 1) + 1)
+
+into
+iter.map(x => rand.nextInt(trials - 1) + 1)
+```
+
 This modification is likely not more efficient because of the limitation of the possible hashes. The only thing that generating possible nonces from 1 to 'n' does is limit our possible answer.
 If there is no nonce that hashes to satisfy the difficulty set under our number of trials, then no matter how many times we run that trial we will never find a solution.
 On the other hand, using a random nonce from 1 to 2^32 has a chance that it might find a nonce that fulfills our difficulty no matter the number of trials, yet it is still very low.
