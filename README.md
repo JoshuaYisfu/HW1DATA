@@ -90,14 +90,12 @@ numTrials   = 5000000
 
 ## 2. **(3 points)** Run the program on GCP to solve the case `k = 7`. Provide `xS`, its hash value, the total time elapsed, and the number of trials. Describe your cluster's configuration (number of machines, number/type of cores, etc.) and your process for estimating the number of trials needed in order to find the nonce.  
 
-==================================
- k=7
- xS= 
- hash value=
- time elapsed=
- Number of trials= 
- Cluster's configurations= 2 machines, 48 cores and 96 threads since we are using a N-1 machine GCP, 
-==================================
+k=7
+xS= 
+hash value=
+time elapsed=
+Number of trials= 
+Cluster's configurations= 2 machines, 48 cores and 96 threads since we are using a N-1 machine GCP
 
 ## 3. **(3 points)** Modify **one** line of code in **src/main/scala/project_1/main.scala** so that the program generates the potential nonce from 1 to `n` (the number of trials) instead of randomly. Discuss whether or not this is more efficient than the randomized approach.
 
