@@ -5,47 +5,46 @@ Sean Chiang and Joshua Yi
 
 ```
 // k = 1
-
 xS          = 793641660this_is_a_bitcoin_block_of_34974696_and_22615604
 hashValue   = 0d3068f6c9d251efd27c65bb3f431462d5189199243554e7f827a4a752c51bd2
 timeElapsed = 1s
 numTrials   = 1
 ```
+
 ```
 // k = 2
-
 xS          = 921400433this_is_a_bitcoin_block_of_34974696_and_22615604
 hashValue   = 00e5bf2be4512d69d04ccac0970e622e00dae60a292017f1f347c08dde43e80c
 timeElapsed = 1s
 numTrials   = 85
 ```
+
 ```
 // k = 3
-
 xS          = 1935801145this_is_a_bitcoin_block_of_34974696_and_22615604
 hashValue   = 000ff59c44a1aeeecd7a83bc8bcf775da7c3b0f54d3126f13cebba9a775cea9c
 timeElapsed = 1s
 numTrials   = 340
 ```
+
 ```
 // k = 4
-
 xS          = 1292877562this_is_a_bitcoin_block_of_34974696_and_22615604
 hashValue   = 00002346784365707d54d2ca2a41018fb97a8e4114e202e7b170ada947d152c2
 timeElapsed = 1s
 numTrials   = 2186
 ```
+
 ```
 // k = 5
-
 xS          = 2076686935this_is_a_bitcoin_block_of_34974696_and_22615604
 hashValue   = 0000048ab821dff36fdf761ccad3c7ac58431abf11240ed8ffe40527b255b9a5
 timeElapsed = 1s
 numTrials   = 24384
 ```
+
 ```
 // k = 6
-
 xS          = 1971864184this_is_a_bitcoin_block_of_34974696_and_22615604
 hashValue   = 0000004a8acc5c382e21f367b53d403679fbddd715edf05c0ae61bad3f220b37
 timeElapsed = 3s
