@@ -75,10 +75,7 @@ Let's look at an example of the mining process to clarify. Say we hash the strin
 Your mission (and yes, you have to accept it) is to run **project_1** with Spark to determine the nonce for varying difficulties of `k` with one of the following strings:
 ```
 // If you're working in a pair
-this_is_a_bitcoin_block_of_yourEagleId1_and_yourEagleId2
-
-// If you're working alone
-this_is_a_bitcoin_block_of_yourEagleId
+this_is_a_bitcoin_block_of_34974696_and_22615604
 ```
 
 The program accepts three parameters: the header string `S`, the difficulty `k`, and the number of trials `n`. For each trial, it will generate a random number between 1 and 2<sup>32</sup>-1 for the nonce `x` and hash `xS`. The program distributes the `n` trials evenly among the compute nodes and executes them in parallel. If a valid nonce is found for difficulty `k`, `xS` as well as its hash value will be outputted.  
