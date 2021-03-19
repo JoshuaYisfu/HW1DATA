@@ -83,6 +83,8 @@ On the other hand, using a random nonce from 1 to 2^32 has a chance that it migh
 The distribution of hash values evens out as the number of trials grows larger in our modified code, but the distribution of hashes is already even if we choose a random nonce from 1 to 2^32
 regardless of how many trials we run. As such, it is not more efficient to limit our potention nonces to the number of trials instead of selecting randomly.
 
+Then again, thanks to the nature of hashes, it is not like setting a ceiling of 2^32 makes the code more efficient either, it is simply that limiting it to 'n' likely won't increase the efficiency.
+
 
 ## Submission via GitHub
 Delete your project's current **README.md** file (the one you're reading right now) and include your report as a new **README.md** file in the project root directory. Have no fear—the README with the project description is always available for reading in the template repository you created your repository from. For more information on READMEs, feel free to visit [this page](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-readmes) in the GitHub Docs. You'll be writing in [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown). Be sure that your repository is up to date and you have pushed all changes you've made to the project's code. When you're ready to submit, simply provide the link to your repository in the Canvas assignment's submission.
