@@ -55,14 +55,18 @@ numTrials   = 228474
 
 ```
 // k = 7
-xS          = 
-hashValue   =
-timeElapsed =
-numTrials   = 
+xS          = 913594006
+hashValue   = 000000053d5cc9b691308c6071f2235ee9b3f2f0e116c06a84f60696b97a0c03
+timeElapsed = 425 seconds
+numTrials   = 99563556
+
+For the simplicity of the project we simply altered the code to tell us the minimum number of trials needed find a hashValue. However, it is imperative to be able to solve this without the use of the altered and as such we can actually use some of the previous concepts to help us understand the mean/median number of trials necessary with each incrementiong difficulty. We can use the Tug-of-war sketch to find the mean/median of the the hash function. We simply need to plug the values into the formula and we can inevitably find the number of trials needed for the hash function. The margin of error is quite large as the probability of actually finding a working hash value within a random generated hash function 2/3(using tug of war). 
 
 Clusters' configuration
   - 2 machines
   - 48 cores and 96 threads since we are using a N-1 machine GCP
+
+  (I am unsure what other details would be necessary...)
 ```
 
 ## 3. **(3 points)** Modify **one** line of code in **src/main/scala/project_1/main.scala** so that the program generates the potential nonce from 1 to `n` (the number of trials) instead of randomly. Discuss whether or not this is more efficient than the randomized approach.
